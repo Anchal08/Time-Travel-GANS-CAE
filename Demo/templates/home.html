@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+{% block body %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Welcome to Time Travel!</h1>
+        <p class="lead">Visualize the aging process of a person's face!</p>
+    </div>
+</div>
+<div class="container">
+    <h2 class="display-6">Upload your picture here!</h2>
+    <form action="http://localhost:5000/uploader" method="POST"
+          enctype="multipart/form-data">
+        <input type="file" name="file"/>
+        <input type="submit"/>
+    </form>
+</div>
+
+{% endblock body %}

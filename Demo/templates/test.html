@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+
+
+
+<style>
+    body {
+        padding-bottom: 150px;
+    }
+</style>
+
+<div class="container">
+    <h1 class="display-4">Check out your results!</h1>
+</div>
+<div class="container">
+    <h2>Input image:</h2>
+    <img src="{{ url_for('static', filename='input_image.png') }}" style="width:128px;height:128px" class="rounded float-left" />
+</div>
+
+<div class="container">
+    <h2>Output image:</h2>
+    <img src="{{ url_for('static', filename='output.png') }}" class="rounded float-left" />
+</div>
+
+{% endblock body %}
